@@ -1,6 +1,6 @@
 # GetBoolChoice
 
-[![PowerShell Gallery - PowerShellGet](https://img.shields.io/badge/PowerShell%20Gallery-PowerShellGet-blue.svg)](https://www.powershellgallery.com/packages/GetBoolChoice)
+[![PowerShell Gallery - GetBoolChoice](https://img.shields.io/badge/PowerShell%20Gallery-GetBoolChoice-blue.svg)](https://www.powershellgallery.com/packages/GetBoolChoice)
 [![Minimum Supported PowerShell Version](https://img.shields.io/badge/PowerShell-5.1-blue.svg)](https://github.com/Toenn-Vaot/psmodule-get-bool-choice)
 
 Introduction
@@ -19,12 +19,12 @@ Requirements
 
 - Windows PowerShell 5.1 or newer.
 
-Get PowerShellGet Module
+Get GetBoolChoice Module
 ========================
 
 Please refer to our [documentation](https://www.powershellgallery.com/packages/GetBoolChoice/) for the up-to-date version on how to get the GetBoolChoice Module.
 
-Get PowerShellGet Source
+Get GetBoolChoice Source
 ========================
 
 #### Steps
