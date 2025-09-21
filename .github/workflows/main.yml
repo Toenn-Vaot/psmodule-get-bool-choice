@@ -11,12 +11,24 @@ jobs:
     steps:
     - name: Get Sources
       uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+        
+    - name: Restore dependencies
+      run: dotnet restore GetBoolChoice.sln
+      
+    - name: Build
+      run: dotnet build GetBoolChoice.sln --no-restore --output ./out
+      
     - name: Test PowerShell Module Manifest
       run: |
-        Test-ModuleManifest -Path ./GetBoolChoice/GetBoolChoice.psd1
+        Test-ModuleManifest -Path ./out/GetBoolChoice/GetBoolChoice.psd1
       shell: pwsh
       
     - name: Publish PowerShell Module
       run: |
-        Publish-Module -Path ./GetBoolChoice -Repository PSGallery -NuGetApiKey ${{secrets.POWERSHELLMODULES_API_KEY}}
+        Publish-Module -Path ./out/GetBoolChoice -Repository PSGallery -NuGetApiKey ${{secrets.POWERSHELLMODULES_API_KEY}}
       shell: pwsh
