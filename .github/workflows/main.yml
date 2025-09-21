@@ -1,0 +1,22 @@
+name: Push to Powershell Gallery
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Get Sources
+      uses: actions/checkout@v4
+    - name: Test PowerShell Module Manifest
+      run: |
+        Test-ModuleManifest -Path ./GetBoolChoice/GetBoolChoice.psd1
+      shell: pwsh
+      
+    - name: Publish PowerShell Module
+      run: |
+        Publish-Module -Path ./GetBoolChoice -Repository PSGallery -NuGetApiKey ${{secrets.POWERSHELLMODULES_API_KEY}}
+      shell: pwsh
