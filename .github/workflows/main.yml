@@ -25,10 +25,10 @@ jobs:
       
     - name: Test PowerShell Module Manifest
       run: |
-        Test-ModuleManifest -Path ./out/GetBoolChoice/GetBoolChoice.psd1
+        Test-ModuleManifest -Path ./out/GetBoolChoice.psd1
       shell: pwsh
       
     - name: Publish PowerShell Module
       run: |
-        Publish-Module -Path ./out/GetBoolChoice -Repository PSGallery -NuGetApiKey ${{secrets.POWERSHELLMODULES_API_KEY}}
+        Publish-Module -Path ./out -Repository PSGallery -NuGetApiKey ${{secrets.POWERSHELLMODULES_API_KEY}}
       shell: pwsh
