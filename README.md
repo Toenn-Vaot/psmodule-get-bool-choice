@@ -1,5 +1,6 @@
 # GetBoolChoice
 
+[![Push to Powershell Gallery](https://github.com/Toenn-Vaot/psmodule-get-bool-choice/actions/workflows/main.yml/badge.svg)](https://github.com/Toenn-Vaot/psmodule-get-bool-choice/actions/workflows/main.yml)
 [![PowerShell Gallery - GetBoolChoice](https://img.shields.io/badge/PowerShell%20Gallery-GetBoolChoice-blue.svg)](https://www.powershellgallery.com/packages/GetBoolChoice)
 [![Minimum Supported PowerShell Version](https://img.shields.io/badge/PowerShell-5.1-blue.svg)](https://github.com/Toenn-Vaot/psmodule-get-bool-choice)
 
